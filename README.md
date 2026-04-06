@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎭 Little Rock HP
 
-## Getting Started
+劇団「Little Rock」の公式ホームページプロジェクト。
+公演情報・キャスト紹介・ギャラリー・お問い合わせ機能を備えた、モダンなWebサイトです。
 
-First, run the development server:
+---
+
+## 🌐 概要
+
+本プロジェクトは、**劇団の魅力を最大限に伝えること**と、
+**運用のしやすさ（更新性）**を両立することを目的に開発されています。
+
+- 公演情報の発信
+- キャスト・スタッフ紹介
+- 舞台写真ギャラリー
+- お問い合わせ / チケット導線
+
+---
+
+## 🧩 技術スタック
+
+### ■ フロントエンド
+
+- React（Next.js）
+- TypeScript
+
+### ■ UI / UX
+
+- MUI（Material UI）
+
+### ■ バックエンド
+
+- Firebase
+
+### ■ アニメーション
+
+- Framer Motion
+
+### ■ コンテンツ管理
+
+- microCMS（ヘッドレスCMS）
+
+### ■ 画像管理
+
+- Cloudinary
+
+### ■ お問い合わせ / チケット
+
+- React Hook Form + Zod（フォーム管理・バリデーション）
+- Resend（メール送信）
+
+### ■ インフラ
+
+- Vercel
+
+---
+
+## 🚀 主な機能
+
+### 🎟 公演情報管理
+
+- 公演一覧 / 詳細ページ
+- 日程・会場・チケット情報の表示
+- microCMSによる簡単更新
+
+### 👤 キャスト紹介
+
+- メンバー情報の一覧表示
+- 写真・プロフィール掲載
+
+### 🖼 ギャラリー
+
+- 舞台写真の表示
+- Cloudinaryによる最適化配信
+
+### 📩 お問い合わせ
+
+- フォーム送信機能
+- バリデーション付き入力チェック
+- メール送信（Resend）
+
+---
+
+## 🏗 アーキテクチャ
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+[ microCMS ] ──┐
+               ├──→ Next.js（Frontend）
+[ Cloudinary ] ┘
+
+[ Neon (PostgreSQL) ] ← Prisma（ORM）
+
+[ Resend ] → メール送信
+
+[ Vercel ] → デプロイ / ホスティング
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 💡 特徴
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- ⚡ 高速表示（Next.js + Vercel）
+- 🎨 アニメーションによる演出（Framer Motion）
+- 🛠 ノーコードで更新可能（microCMS）
+- 🖼 画像最適化（Cloudinary）
+- 🔒 型安全（TypeScript + Zod）
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🎯 今後の拡張
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- 🎫 チケット購入機能の強化
+- 🔐 管理者ログイン機能
+- 📅 公演カレンダー表示
+- 🌍 多言語対応
