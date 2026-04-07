@@ -15,13 +15,14 @@ type Props = {
 
 export const SideBarItem = ({ title, icon, href, onClick }: Props) => {
   return (
-    <ListItem disablePadding>
+    <ListItem disablePadding sx={{ height: "80px" }}>
       <ListItemButton
         component={href ? Link : "li"}
         href={href}
         onClick={onClick}
         disableRipple
         sx={{
+          height: "100%",
           color: "#000",
           ":hover": {
             color: "#ff0000",

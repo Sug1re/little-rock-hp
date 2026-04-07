@@ -6,6 +6,9 @@ import {
   CalendarDaysIcon,
   NewspaperIcon,
   UsersIcon,
+  FlagIcon,
+  MapPinIcon,
+  EnvelopeIcon,
 } from "@heroicons/react/24/outline";
 import { SideBarItem } from "./SideBarItem";
 
@@ -40,6 +43,20 @@ export const SideBar = ({ open, onClose }: Props) => {
           />
 
           <SideBarItem title="キャスト一覧" icon={<UsersIcon />} href="/cast" />
+
+          <SideBarItem title="グッズ情報" icon={<FlagIcon />} href="/goods" />
+
+          <SideBarItem
+            title="会場アクセス"
+            icon={<MapPinIcon />}
+            href="/venue"
+          />
+
+          <SideBarItem
+            title="お問い合わせ"
+            icon={<EnvelopeIcon />}
+            href="/contact"
+          />
         </Box>
       </Drawer>
     </>
