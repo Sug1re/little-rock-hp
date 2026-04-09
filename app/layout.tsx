@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
 import { ThemeRegistry } from "@/components/providers/ThemeRegistry";
+
+config.autoAddCss = false;
 
 export const metadata: Metadata = {
   title: "Little Rock",

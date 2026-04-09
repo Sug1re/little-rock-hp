@@ -5,10 +5,12 @@ import {
   ListItemText,
 } from "@mui/material";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
 type Props = {
   title: string;
-  icon: React.ReactNode;
+  icon: IconDefinition;
   href?: string;
   onClick?: () => void;
 };
@@ -36,10 +38,14 @@ export const SideBarItem = ({ title, icon, href, onClick }: Props) => {
             "& svg": {
               width: "2.5rem",
               height: "2.5rem",
+              fontSize: {
+                xs: "30px",
+                sm: "35px",
+              },
             },
           }}
         >
-          {icon}
+          <FontAwesomeIcon icon={icon} />
         </ListItemIcon>
         <ListItemText primary={title} />
       </ListItemButton>

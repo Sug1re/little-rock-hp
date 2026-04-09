@@ -2,11 +2,11 @@
 
 import { AppBar, Box, Toolbar, Typography } from "@mui/material";
 import {
-  TicketIcon,
-  CalendarDaysIcon,
-  NewspaperIcon,
-  Bars3Icon,
-} from "@heroicons/react/24/outline";
+  faBars,
+  faCalendarDays,
+  faNewspaper,
+  faTicket,
+} from "@fortawesome/free-solid-svg-icons";
 import { HeaderBt } from "./HeaderBt";
 import { SideBar } from "../SideBar/SideBar";
 
@@ -23,64 +23,46 @@ export const Header = () => {
         <AppBar
           position="fixed"
           sx={{
-            height: "16vh",
             transition: "transform 0.3s ease",
             transform: show ? "translateY(0)" : "translateY(-50%)",
           }}
         >
-          <Toolbar sx={{ display: "flex", flexDirection: "column" }}>
+          <Toolbar
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              p: 0,
+              minHeight: "auto",
+            }}
+          >
             <Box sx={{ display: "flex" }}>
               <Typography
                 variant="h6"
                 component="div"
                 sx={{ height: "8vh", display: "flex", alignItems: "center" }}
               >
-                Little Rock
+                LittleRock
               </Typography>
             </Box>
 
-            <Box sx={{ display: "flex" }}>
-              <HeaderBt
-                title="ニュース"
-                icon={
-                  <NewspaperIcon
-                    style={{ width: "2.5rem", height: "2.5rem" }}
-                  />
-                }
-                href="/news"
-              />
-
-              <HeaderBt
-                title="Little Rockとは"
-                icon={
-                  <TicketIcon style={{ width: "2.5rem", height: "2.5rem" }} />
-                }
-                href="/about"
-              />
-
-              <HeaderBt
-                title="チケット予約"
-                icon={
-                  <TicketIcon style={{ width: "2.5rem", height: "2.5rem" }} />
-                }
-                href="/ticket"
-              />
-
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "space-around",
+                width: "100%",
+              }}
+            >
+              <HeaderBt title="ニュース" icon={faNewspaper} href="/news" />
+              <HeaderBt title="LittleRockとは" icon={faTicket} href="/about" />
+              <HeaderBt title="チケット予約" icon={faTicket} href="/ticket" />
               <HeaderBt
                 title="スケジュール"
-                icon={
-                  <CalendarDaysIcon
-                    style={{ width: "2.5rem", height: "2.5rem" }}
-                  />
-                }
+                icon={faCalendarDays}
                 href="/schedule"
               />
-
               <HeaderBt
                 title="メニュー"
-                icon={
-                  <Bars3Icon style={{ width: "2.5rem", height: "2.5rem" }} />
-                }
+                icon={faBars}
                 onClick={handlers.open}
               />
             </Box>
