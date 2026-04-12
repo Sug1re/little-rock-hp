@@ -1,0 +1,7 @@
+export default function Stage() {
+  return (
+    <>
+      <h1>公演一覧</h1>
+    </>
+  );
+}

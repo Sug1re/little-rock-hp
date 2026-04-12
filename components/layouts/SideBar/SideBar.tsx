@@ -3,13 +3,13 @@
 import { Box, Drawer } from "@mui/material";
 import {
   faBagShopping,
-  faCalendarDays,
   faEnvelope,
   faMapLocationDot,
   faNewspaper,
   faTicket,
   faUserGroup,
 } from "@fortawesome/free-solid-svg-icons";
+import { faFlag as faFlagRegular } from "@fortawesome/free-regular-svg-icons";
 import { SideBarItem } from "./SideBarItem";
 
 type Props = {
@@ -27,11 +27,7 @@ export const SideBar = ({ open, onClose }: Props) => (
 
         <SideBarItem title="チケット予約" icon={faTicket} href="/ticket" />
 
-        <SideBarItem
-          title="スケジュール"
-          icon={faCalendarDays}
-          href="/schedule"
-        />
+        <SideBarItem title="公演一覧" icon={faFlagRegular} href="/stage" />
 
         <SideBarItem title="キャスト一覧" icon={faUserGroup} href="/cast" />
 

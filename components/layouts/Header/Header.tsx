@@ -3,10 +3,10 @@
 import { AppBar, Box, Toolbar, Typography } from "@mui/material";
 import {
   faBars,
-  faCalendarDays,
   faNewspaper,
   faTicket,
 } from "@fortawesome/free-solid-svg-icons";
+import { faFlag as faFlagRegular } from "@fortawesome/free-regular-svg-icons";
 import { HeaderBt } from "./HeaderBt";
 import { SideBar } from "../SideBar/SideBar";
 
@@ -53,13 +53,13 @@ export const Header = () => {
               }}
             >
               <HeaderBt title="ニュース" icon={faNewspaper} href="/news" />
+
               <HeaderBt title="LittleRockとは" icon={faTicket} href="/about" />
+
               <HeaderBt title="チケット予約" icon={faTicket} href="/ticket" />
-              <HeaderBt
-                title="スケジュール"
-                icon={faCalendarDays}
-                href="/schedule"
-              />
+
+              <HeaderBt title="公演一覧" icon={faFlagRegular} href="/stage" />
+
               <HeaderBt
                 title="メニュー"
                 icon={faBars}

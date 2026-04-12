@@ -9,6 +9,7 @@ export const FooterSiteMap = () => {
     <>
       <Box
         sx={{
+          height: "auto",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "flex-start",

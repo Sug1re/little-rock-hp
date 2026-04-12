@@ -2,7 +2,11 @@
 
 import Link from "next/link";
 import { Box, Button, Typography } from "@mui/material";
-import { faInstagram, faXTwitter } from "@fortawesome/free-brands-svg-icons";
+import {
+  faInstagram,
+  faXTwitter,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FooterSiteMap } from "./FooterSiteMap";
 
@@ -20,9 +24,8 @@ export const Footer = () => {
         トップへ戻る
       </Button>
 
-      <Box sx={{ height: "40vh" }}>
-        <FooterSiteMap />
-      </Box>
+      <FooterSiteMap />
+
       <Box
         sx={{
           height: "10vh",
@@ -33,6 +36,14 @@ export const Footer = () => {
       >
         <Typography variant="body2">LittleRockのロゴ</Typography>
         <Box>
+          <Button
+            component={Link}
+            href="https://youtube.com/your_account"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faYoutube} style={{ fontSize: "30px" }} />
+          </Button>
           <Button
             component={Link}
             href="https://instagram.com/your_account"
