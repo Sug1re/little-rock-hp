@@ -9,13 +9,16 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FooterSiteMap } from "./FooterSiteMap";
+import { useScrollToTop } from "./hooks/useSchollToTop";
 
 export const Footer = () => {
+  const onTop = useScrollToTop();
   return (
     <Box component="footer" sx={{ bgcolor: "grey.900", color: "#fff" }}>
       <Button
         component={Link}
         href="/"
+        onClick={onTop}
         variant="contained"
         color="primary"
         disableRipple
