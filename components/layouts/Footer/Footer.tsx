@@ -2,17 +2,14 @@
 
 import Link from "next/link";
 import { Box, Button, Typography } from "@mui/material";
-import {
-  faInstagram,
-  faXTwitter,
-  faYoutube,
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { FooterSiteMap } from "./FooterSiteMap";
-import { useScrollToTop } from "./hooks/useSchollToTop";
+import { SiteMap } from "./SiteMap";
+import { useScrollToTop } from "./hooks/useScrollToTop";
+import { SnsBt } from "./SnsBt";
 
 export const Footer = () => {
   const onTop = useScrollToTop();
+
+  const year = new Date().getFullYear();
   return (
     <Box component="footer" sx={{ bgcolor: "grey.900", color: "#fff" }}>
       <Button
@@ -22,53 +19,46 @@ export const Footer = () => {
         variant="contained"
         color="primary"
         disableRipple
-        sx={{ width: "100%" }}
+        sx={{
+          borderRadius: 0,
+          width: "100%",
+        }}
       >
         トップへ戻る
       </Button>
 
-      <FooterSiteMap />
-
       <Box
         sx={{
-          height: "10vh",
           display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
+          flexDirection: {
+            xs: "column",
+            sm: "row",
+          },
         }}
       >
-        <Typography variant="body2">LittleRockのロゴ</Typography>
-        <Box>
-          <Button
-            component={Link}
-            href="https://youtube.com/your_account"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faYoutube} style={{ fontSize: "30px" }} />
-          </Button>
-          <Button
-            component={Link}
-            href="https://instagram.com/your_account"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faInstagram} style={{ fontSize: "30px" }} />
-          </Button>
-          <Button
-            component={Link}
-            href="https://twitter.com/your_account"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faXTwitter} style={{ fontSize: "30px" }} />
-          </Button>
+        <Box
+          sx={{
+            height: { xs: "10vh", sm: "20vh" },
+            width: { sm: "50vw" },
+            display: "flex",
+            flexDirection: {
+              xs: "row",
+              sm: "column",
+            },
+            alignItems: "center",
+            justifyContent: "space-around",
+          }}
+        >
+          <Box>Little Rockのロゴ</Box>
+          <SnsBt />
+        </Box>
+        <Box sx={{ height: { xs: "25vh", sm: "20vh" }, width: { sm: "50vw" } }}>
+          <SiteMap />
         </Box>
       </Box>
-      <Box mt={4} textAlign="center" sx={{ py: 6 }}>
-        <Typography variant="body2">
-          © 2023 Little Rock. All Rights Reserved.
-        </Typography>
+
+      <Box textAlign="center" sx={{ py: 6 }}>
+        <Typography variant="body2">© 2023-{year} Little Rock</Typography>
       </Box>
     </Box>
   );
