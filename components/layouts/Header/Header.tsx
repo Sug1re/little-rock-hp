@@ -22,6 +22,7 @@ export const Header = () => {
       <Box>
         <AppBar
           position="fixed"
+          elevation={0}
           sx={{
             transition: "transform 0.3s ease",
             transform: show ? "translateY(0)" : "translateY(-50%)",
