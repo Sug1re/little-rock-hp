@@ -19,7 +19,7 @@ export const Header = () => {
 
   return (
     <>
-      <Box sx={{}}>
+      <Box>
         <AppBar
           position="fixed"
           sx={{
