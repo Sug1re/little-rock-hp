@@ -20,11 +20,10 @@ export const PerformanceCard = ({ performance }: Props) => {
     <Card
       sx={{
         width: "100%",
-        maxWidth: "300px",
+        maxWidth: "400px",
         height: "400px",
         borderRadius: 2,
         boxShadow: "0 4px 16px rgba(0,0,0,0.08)",
-        m: 1,
         border: "0.5px solid #e0e0e0",
         overflow: "hidden",
       }}
