@@ -1,10 +1,20 @@
 import { Box, Container, Typography } from "@mui/material";
 import { Footer } from "@/components/layouts/Footer/Footer";
 import { Header } from "@/components/layouts/Header/Header";
-import { StageList } from "@/components/elements/List/StageList";
-import { SearchBar } from "@/components/elements/SearchBar";
+import { getStageDetail } from "@/libs/microcms/stage";
 
-export default function Stage() {
+type Props = {
+  params: {
+    id: string;
+  };
+};
+
+export default async function StageDetail({ params }: Props) {
+  const { id } = await params;
+
+  const data = await getStageDetail(id);
+
+  console.log(data);
   return (
     <>
       <Header />
@@ -26,9 +36,18 @@ export default function Stage() {
             公演一覧
           </Typography>
 
-          <SearchBar />
-
-          <StageList />
+          <Typography
+            sx={{
+              fontSize: "2rem",
+              fontWeight: "bold",
+              mb: 4,
+              textAlign: "center",
+            }}
+          >
+            {data.title}
+            {data.id}
+            {data.date}
+          </Typography>
         </Box>
       </Container>
 

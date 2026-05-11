@@ -1,14 +1,17 @@
 import {
   MicroCMSImage,
-  MicroCMSListResponse,
 } from "microcms-js-sdk";
 
-export type Performance = {
+export type Stage = {
   id: string;
   title: string;
   thumbnail: MicroCMSImage;
   date: string;
 };
 
-export type PerformanceResponse =
-  MicroCMSListResponse<Performance>;
+export type StageResponse = {
+  contents: Stage[];
+  totalCount: number;
+  offset: number;
+  limit: number;
+};

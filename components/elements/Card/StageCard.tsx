@@ -9,13 +9,13 @@ import {
   Box,
   CardActionArea,
 } from "@mui/material";
-import { Performance } from "@/libs/microcms/types";
+import { Stage } from "@/libs/microcms/types";
 
 type Props = {
-  performance: Performance;
+  stage: Stage;
 };
 
-export const PerformanceCard = ({ performance }: Props) => {
+export const StageCard = ({ stage }: Props) => {
   return (
     <Card
       sx={{
@@ -30,7 +30,7 @@ export const PerformanceCard = ({ performance }: Props) => {
     >
       <CardActionArea
         component={Link}
-        href={`/performance/${performance.id}`}
+        href={`/stage/${stage.id}`}
         disableRipple
         sx={{
           height: "100%",
@@ -68,8 +68,8 @@ export const PerformanceCard = ({ performance }: Props) => {
         >
           <Image
             className="performance-image"
-            src={performance.thumbnail.url}
-            alt={performance.title}
+            src={stage.thumbnail.url}
+            alt={stage.title}
             fill
             style={{
               objectFit: "contain",
@@ -100,7 +100,7 @@ export const PerformanceCard = ({ performance }: Props) => {
                 fontSize: "1rem",
               }}
             >
-              {new Date(performance.date)
+              {new Date(stage.date)
                 .toLocaleDateString("ja-JP")
                 .replaceAll("/", ".")}
             </Typography>
@@ -113,7 +113,7 @@ export const PerformanceCard = ({ performance }: Props) => {
                 height: "3em",
               }}
             >
-              {performance.title}
+              {stage.title}
             </Typography>
           </CardContent>
         </Box>
