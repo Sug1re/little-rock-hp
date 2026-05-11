@@ -12,6 +12,7 @@ import { SideBar } from "../SideBar/SideBar";
 
 import { useDisclosure } from "@mantine/hooks";
 import { useHeaderScroll } from "./hooks/useHeaderScroll";
+import { ticketLinks } from "@/constants/externalLinks/ticket";
 
 export const Header = () => {
   const { show } = useHeaderScroll();
@@ -57,7 +58,13 @@ export const Header = () => {
 
               <HeaderBt title="LittleRockとは" icon={faTicket} href="/about" />
 
-              <HeaderBt title="チケット予約" icon={faTicket} href="/ticket" />
+              <HeaderBt
+                title="チケット予約"
+                icon={faTicket}
+                href={ticketLinks.ticket.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              />
 
               <HeaderBt title="公演一覧" icon={faFlagRegular} href="/stage" />
 
@@ -72,7 +79,6 @@ export const Header = () => {
 
         <SideBar open={isOpen} onClose={handlers.close} />
       </Box>
-      ;
     </>
   );
 };

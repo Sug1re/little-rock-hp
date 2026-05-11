@@ -8,14 +8,25 @@ type Props = {
   icon: IconDefinition;
   href?: string;
   onClick?: () => void;
+  target?: string;
+  rel?: string;
 };
 
-export const HeaderBt = ({ title, icon, href, onClick }: Props) => {
+export const HeaderBt = ({
+  title,
+  icon,
+  href,
+  onClick,
+  target,
+  rel,
+}: Props) => {
   return (
     <MenuItem
       component={href ? Link : "li"}
       href={href}
       onClick={onClick}
+      target={target}
+      rel={rel}
       disableRipple
       sx={{
         p: 0,
