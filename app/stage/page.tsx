@@ -2,7 +2,6 @@ import { Box, Container, Typography } from "@mui/material";
 import { Footer } from "@/components/layouts/Footer/Footer";
 import { Header } from "@/components/layouts/Header/Header";
 import { StageList } from "@/components/elements/List/StageList";
-import { SearchBar } from "@/components/elements/SearchBar";
 
 export default function Stage() {
   return (
@@ -21,12 +20,11 @@ export default function Stage() {
               fontSize: "1.5rem",
               display: "flex",
               justifyContent: "center",
+              py: 4,
             }}
           >
             公演一覧
           </Typography>
-
-          <SearchBar />
 
           <StageList />
         </Box>
