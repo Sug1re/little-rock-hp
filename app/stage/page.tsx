@@ -18,9 +18,13 @@ export default function Stage() {
           <Typography
             sx={{
               fontSize: "1.5rem",
-              display: "flex",
+              display: "flex-start",
               justifyContent: "center",
-              py: 4,
+              bgcolor: "grey.900",
+              color: "#ffffff",
+              py: 2,
+              px: 4,
+              my: 4,
             }}
           >
             公演一覧
