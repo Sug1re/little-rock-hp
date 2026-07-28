@@ -31,6 +31,7 @@ export const HeaderBt = ({
       sx={{
         p: 0,
         mt: 1.5,
+        mb: 0.5,
         height: "8vh",
         width: { xs: "70px", sm: "120px" },
         display: "flex",
@@ -38,7 +39,7 @@ export const HeaderBt = ({
         alignItems: "center",
         color: "#fff",
         ":hover": {
-          color: "#000",
+          color: "#FF784D",
           backgroundColor: "transparent",
         },
       }}

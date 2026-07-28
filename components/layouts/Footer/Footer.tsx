@@ -5,6 +5,7 @@ import { Box, Button, Typography } from "@mui/material";
 import { SiteMap } from "./SiteMap";
 import { useScrollToTop } from "./hooks/useScrollToTop";
 import { SnsBt } from "./SnsBt";
+import Image from "next/image";
 
 export const Footer = () => {
   const onTop = useScrollToTop();
@@ -22,6 +23,7 @@ export const Footer = () => {
         sx={{
           borderRadius: 0,
           width: "100%",
+          bgcolor: "#602D1D",
         }}
       >
         トップへ戻る
@@ -49,7 +51,16 @@ export const Footer = () => {
             justifyContent: "space-around",
           }}
         >
-          <Box>Little Rockのロゴ</Box>
+          <Image
+            src="/logo.jpg"
+            alt="LittleRock"
+            width={70}
+            height={70}
+            style={{
+              objectFit: "cover",
+              borderRadius: "50%",
+            }}
+          />
           <SnsBt />
         </Box>
         <Box sx={{ height: { xs: "25vh", sm: "20vh" }, width: { sm: "50vw" } }}>

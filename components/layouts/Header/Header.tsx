@@ -1,6 +1,6 @@
 "use client";
 
-import { AppBar, Box, Toolbar, Typography } from "@mui/material";
+import { AppBar, Box, Toolbar } from "@mui/material";
 import {
   faBars,
   faNewspaper,
@@ -13,6 +13,7 @@ import { SideBar } from "../SideBar/SideBar";
 import { useDisclosure } from "@mantine/hooks";
 import { useHeaderScroll } from "./hooks/useHeaderScroll";
 import { ticketLinks } from "@/constants/externalLinks/ticket";
+import Image from "next/image";
 
 export const Header = () => {
   const { show } = useHeaderScroll();
@@ -27,25 +28,27 @@ export const Header = () => {
           sx={{
             transition: "transform 0.3s ease",
             transform: show ? "translateY(0)" : "translateY(-50%)",
+            bgcolor: "#602D1D",
           }}
         >
           <Toolbar
             sx={{
               display: "flex",
               flexDirection: "column",
-              p: 0,
+              pt: 1,
               minHeight: "auto",
             }}
           >
-            <Box sx={{ display: "flex" }}>
-              <Typography
-                variant="h6"
-                component="div"
-                sx={{ height: "8vh", display: "flex", alignItems: "center" }}
-              >
-                LittleRock
-              </Typography>
-            </Box>
+            <Image
+              src="/logo.jpg"
+              alt="LittleRock"
+              width={70}
+              height={70}
+              style={{
+                objectFit: "cover",
+                borderRadius: "50%",
+              }}
+            />
 
             <Box
               sx={{

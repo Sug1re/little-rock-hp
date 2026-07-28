@@ -25,9 +25,9 @@ export const SideBarItem = ({ title, icon, href, onClick }: Props) => {
         disableRipple
         sx={{
           height: "100%",
-          color: "#000",
+          color: "#ffffff",
           ":hover": {
-            color: "#ff0000",
+            color: "#FF784D",
             backgroundColor: "transparent",
           },
         }}

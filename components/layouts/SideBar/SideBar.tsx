@@ -20,7 +20,16 @@ type Props = {
 export const SideBar = ({ open, onClose }: Props) => (
   <>
     <Drawer open={open} onClose={onClose}>
-      <Box sx={{ width: "250px" }}>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          width: "250px",
+          height: "100%",
+          bgcolor: "#602D1D",
+        }}
+      >
         <SideBarItem title="ニュース" icon={faNewspaper} href="/news" />
 
         <SideBarItem title="Little Rockとは" icon={faTicket} href="/about" />
