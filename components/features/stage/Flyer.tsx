@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import { getStageDetail } from "@/libs/microcms/stage";
+import { getStageDetail } from "@/libs/microcms/api/stage";
 import Image from "next/image";
 
 type Props = {

@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import { getStageList } from "@/libs/microcms/stage";
+import { getStageList } from "@/libs/microcms/api/stage";
 import { Stage } from "@/libs/microcms/types";
 import { StageCard } from "@/components/elements/Card/StageCard";
 

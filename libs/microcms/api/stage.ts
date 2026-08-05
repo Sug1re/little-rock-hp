@@ -1,5 +1,5 @@
-import { client } from "./client";
-import { Stage, StageResponse } from "./types";
+import { client } from "../client";
+import { Stage, StageResponse } from "../types";
 
 export const getStageList =
   async (): Promise<StageResponse> => {

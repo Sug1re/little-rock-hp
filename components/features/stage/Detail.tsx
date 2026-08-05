@@ -1,5 +1,5 @@
 import { Box, Container, Typography } from "@mui/material";
-import { getStageDetail } from "@/libs/microcms/stage";
+import { getStageDetail } from "@/libs/microcms/api/stage";
 
 type Props = {
   params: {
